@@ -1039,15 +1039,17 @@ jobs:
       
       - name: make download
         run: |
+            cd lede
             make download -j 3
             make defconfig
 
       - name: compile
         run: |
-            make -j 3
+            cd lede;make -j 3
 
       - name: upload img
-        run: |   
+        run: |
+            cd lede
             7z a img.7z bin/targets/x86/64/openwrt-x86-64-generic-squashfs-combined-efi.img
             mv img.7z ..
             cd ..
