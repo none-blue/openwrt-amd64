@@ -1040,7 +1040,7 @@ jobs:
       - name: make download
         run: |
             cd lede
-            make defconfig
+            #make defconfig
             make download -j 3
             
 
