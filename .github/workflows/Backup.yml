@@ -1043,11 +1043,11 @@ jobs:
       - name: make download
         run: |
             cd lede
-            make download -j $(nproc)
+            make download -j 3
 
       - name: compile
         run: |
-            cd lede;make -j $(nproc)
+            cd lede;make -j 3
 
       - name: upload img
         run: |
